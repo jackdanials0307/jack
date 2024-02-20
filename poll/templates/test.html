@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 's.css' %}">
+    <link rel="stylesheet" href="{% static 'g.css' %}">
+    
+</head>
+<!-- <body>
+    {% with age=22 %}
+    <h1>{{person.fname}}</h1>
+    <div>
+        <img src="" alt="">
+    </div>
+    <h3>{{age}}</h3>
+    {% endwith %} -->
+
+    <!-- <h1>{{ person.fname}}</h1>
+
+    {% if age > 20 %}
+    <h3>{{age}} is SUITABLE</h3>
+    {% else %}
+    <h3>{{ age }} is NOT SUITABLE</h3>
+    {% endif %}    
+</body> -->
+
+<!-- <h1>{% for p in person %}
+    <h1>{{p.fname}}</h1>
+     {% empty %}
+     <h1> No Pesrson Available</h1>
+</h1>
+{% endfor %} -->
+
+<!-- <h1>{% for p in fruits %}
+    <h1>{{p}}</h1>
+
+
+    {% endfor %} -->
+
+<!-- 
+<ul>
+    <h1>{% for p in fruits %}
+       <li {% if forloop.first %} style="background-color: chartreuse;"{% endif %} {% if forloop.last %} style="background-color: rgb(182, 114, 31)" {% endif %} ><h1>{{p}}</h1>-----{{ forloop.revcounter }}
+    
+    
+        {% endfor %}
+
+    </li> 
+
+    </ul> -->
+
+    <div class="container m-5 ">
+        <a  class="btn btn-primary "  href="/ffn">FirstName</a>
+        <a  class="btn btn-info "  href="/fln">LastName</a>
+        <a  class="btn btn-warning "  href="/fc">CitytName</a>
+</div>
+
+<div class="container m-5">
+    <ul>
+    {% for p in person %}
+   <li>{{p.fname}} {{p.name}} {{p.city}}</li>
+    {% endfor %}
+
+</ul>
+</div>
+</html>
